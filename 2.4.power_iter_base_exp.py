@@ -28,46 +28,19 @@ def iterPower(base, exp):
     # Your code here
     
 
+
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 $$$$$$$$$$ ITERATIVE $$$$$$$$$$$$$
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-''
-2 x 1
-2 x 2
-2 x 3
-2 x 4
-2 x 5
-
-
-
-def iterPower(base, exp):
-    
-    if exp >= 0:
-        
-        for i in range (1, exp+1):
-        
-        my_exponential = base * exp * (exp - i)
-        
-        print (str(prod))
-        
-        return prod
-    
-    else:
-        break
-    
-print (iterPower (2, 5))
-
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$ RECURSIVE $$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-    ''
+    '''
     = 2
     = 2 x 2
     = 2 x 2 x 2
-    ''
+    base= int or float.
+    exp is int and >= 0
+    do not post print in the grader
+    '''
 
 def iterPower(base, exp):
     
@@ -77,9 +50,66 @@ def iterPower(base, exp):
     for i in range (1, exp+1):
         
         prod *= base
-        print (str(prod))
+        #print (str(prod))
         
     return prod
 
 
 print (iterPower (2, 5))
+
+
+
+
+$$$$$$$$$$$$$$$$$from TA $$$$$$$$$$
+
+def iterPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+
+    returns: int or float, base^exp
+    '''
+    n = 1
+    for i in range(exp):
+        n *= base
+    return n
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$ RECURTION $$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+def recurPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+ 
+    returns: int or float, base^exp
+    '''
+    # Your code here
+
+    if exp == 0:
+        return 1
+    
+    else:
+        return base*recurPower (base,exp-1)
+    
+print (recurPower (2,5))  
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
