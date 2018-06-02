@@ -138,7 +138,7 @@ balance1=balance
 
 epsilon = .01
 
-while abs(balance1) != .01:
+while abs(balance1) != epsilon:
 #while True:
     
         balance1=balance
